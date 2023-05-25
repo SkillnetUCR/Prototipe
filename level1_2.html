@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
+
+
+</head>
+
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <a href="index.html">
+                <img class="imgGame" src="images/logo_1.png"></img>
+            </a>
+        </li>
+        <li>
+            <h5 class="titleGame">SkillNet</h5>
+        </li>
+        <li><a class="navbarLetter" href="#">Inicio</a></li>
+        <li><a class="navbarLetter" href="#">Ranking</a></li>
+        <li><a class="navbarLetter" href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+
+<style>
+    .letter-red {
+        font-weight: bold;
+    }
+</style>
+
+
+<body id="body" class="body" onload="loadOrden()">
+
+    <div class="container" id="main_container">
+
+        <div style="display: flex;">
+            <button type="button" class="btn button-information-lvl">Nivel 1 etapa 2</button>
+            <!-- <button type="button" class="btn button-information" id="btn-information"
+                onclick="showInstruccion()">i</button> -->
+        </div>
+
+        <div class="container-lives">
+            <div class="lives">
+
+            </div>
+        </div>
+
+
+        <div class="container-information">
+
+            <button type="button" class="btn button-information" id="btn-information"
+                onclick="showInstruccion()">i</button>
+
+        </div>
+
+
+        <div class="drop-targets" id="drop-targets" style="margin-top: 3%;">
+            <div>
+                <h5 style="color:white;    display: flex;
+                justify-content: center;">ID DE RED</h5>
+                <div class="box" style="background-color: white; border-radius: 15px;" id="button-devices">
+                </div>
+            </div>
+            <div>
+                <h5 style="color:white;    display: flex;
+                justify-content: center;">MASCARA</h5>
+                <div class="box normalRespuesta" id="respuesta1_1" name="respuesta"></div>
+            </div>
+        </div>
+        <div class="instruccion-container">
+            <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
+        </div>
+
+        <div class="optionesDevice-lvl1">
+            <div class="box" id="id_box_1">
+                <div style="background-color: #42DBB6; border-radius: 15px;" class="itemDevice" id="255.255.255.0"
+                    draggable="true" ondragstart="dragStart(event)">
+                    <p class="letter-red">255.255.255.0</p>
+                </div>
+            </div>
+            <div class="box" id="id_box_2">
+                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="254.0.0.0"
+                    draggable="true" ondragstart="dragStart(event)">
+                    <p class="letter-red">254.0.0.0</p>
+                </div>
+            </div>
+            <div class="box" id="id_box_3">
+                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="255.255.0.0"
+                    draggable="true" ondragstart="dragStart(event)">
+                    <p class="letter-red">255.255.0.0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nivel-container invisible" id="nivel_completado">
+            <h1>¡Felicidades!</h1>
+            <h2>Nivel 1 completado</h2>
+            <h3>Nuevos conocimientos adquiridos!</h3>
+
+            <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
+                <h4>Siguiente</h4>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="container-2" style="margin-top: 15%;" id="container_2">
+        <div class="progress-container" id="progress_container"></div>
+    </div>
+
+
+    <script src="functions1_2.js"></script>
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>
