@@ -1,7 +1,8 @@
 const orden = [
-    { dispositivo: "127.191.193.0/29", respuesta: "Clase_A", ayuda: "La Clase A tiene un rango de:<br> 0.0.0.0 a 127.255.255.255" },
-    { dispositivo: "129.86.0.0/20", respuesta: "Clase_B", ayuda: "La Clase B tiene un rango de:<br> 128.0.0.0 a 191.255.255.255" },
-    { dispositivo: "193.191.0.1/16", respuesta: "Clase_C", ayuda: "La Clase C tiene un rango de:<br> 192.0.0.0 a 223.255.255.255" },
+
+    { dispositivo: "127.191.193.0", respuesta: "Clase_A", ayuda: "La Clase A tiene un rango de:<br> 0.0.0.0 a 127.255.255.255" },
+    { dispositivo: "129.86.0.0", respuesta: "Clase_B", ayuda: "La Clase B tiene un rango de:<br> 128.0.0.0 a 191.255.255.255" },
+    { dispositivo: "193.191.0.1", respuesta: "Clase_C", ayuda: "La Clase C tiene un rango de:<br> 192.0.0.0 a 223.255.255.255" },
 ];
 
 //Variable para medir el progreso
