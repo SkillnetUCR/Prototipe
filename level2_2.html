@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
+
+
+</head>
+
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <a href="index.html">
+                <img class="imgGame" src="images/logo_1.png"></img>
+            </a>
+        </li>
+        <li>
+            <h5 class="titleGame">SkillNet</h5>
+        </li>
+        <li><a class="navbarLetter" href="#">Inicio</a></li>
+        <li><a class="navbarLetter" href="#">Ranking</a></li>
+        <li><a class="navbarLetter" href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+
+<style>
+
+</style>
+
+
+<body id="body" class="body" onload="loadOrden()">
+
+    <div class="container" id="main_container">
+
+        <div class="container-lives">
+            <div class="lives">
+
+            </div>
+        </div>
+
+
+        <div class="container-2" style="margin-block-end: 0%;">
+            <div class="titles" id="evaluando">
+                <button type="button" class="btn" id="button-devices">Dispositivo</button>
+
+            </div>
+        </div>
+
+
+        <div class="drop-targets" id="drop-targets">
+            <div class="box normalRespuesta" id="respuesta2_2" name="respuesta"></div>
+        </div>
+        <div class="instruccion-container">
+            <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
+        </div>
+
+        <div class="optionsDevice">
+            <div class="box" id="id_box_1">
+                <div class="itemDevice" id="item_1" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="tester" name="tester" src="./images/tester.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_2">
+                <div class="itemDevice" id="item_2" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="router" name="router" src="./images/router.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_3">
+                <div class="itemDevice" id="item_3" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="cable-UTP" name="cable-UTP" src="./images/cable UTP.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_4">
+                <div class="itemDevice" id="item_4" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="laptop" name="laptop" src="./images/laptop.jpeg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_5">
+                <div class="itemDevice" id="item_5" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="patch-panel" name="patch-panel" src="./images/patch-panel.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_6">
+                <div class="itemDevice" id="item_6" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="RJ45" name="RJ45" src="./images/RJ45.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_7">
+                <div class="itemDevice" id="item_7" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="rack" src="./images/rack.jpg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_8">
+                <div class="itemDevice" id="item_8" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="ponchadora" src="./images/ponchadora.jpeg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_9">
+                <div class="itemDevice" id="item_9" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="prensadora" src="./images/prensadora.jpeg" />
+                </div>
+            </div>
+            <div class="box" id="id_box_10">
+                <div class="itemDevice" id="item_10" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="cable-Coaxial" src="./images/cable Coaxial.jpg" />
+                </div>
+            </div>
+        </div>
+        <!-- 
+        <div class="nivel-container hiden" id="nivel_completado">
+            <h1>¡Felicidades!</h1>
+            <h2>Nivel 2 completado</h2>
+            <h3>Nuevos conocimientos adquiridos!</h3>
+
+            <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
+                <h4>Siguiente</h4>
+            </div>
+        </div> -->
+
+
+    </div>
+
+
+    <div class="container-2" id="container_2">
+        <div class="progress-container" id="progress_container"></div>
+    </div>
+
+    <div class="container-information">
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+    </div>
+
+
+    <script src="functions2_2.js"></script>
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>

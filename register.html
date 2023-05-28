@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
+
+
+</head>
+
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <img class="imgGame" src="images/logo_1.png"></img>
+        </li>
+        <li>
+            <h5 class="titleGame">SkillNet</h5>
+        </li>
+        <li><a class="navbarLetter" href="#">Inicio</a></li>
+        <li><a class="navbarLetter" href="#">Ranking</a></li>
+        <li><a class="navbarLetter" href="#">Contacto</a></li>
+
+    </ul>
+    <ul>
+        <li><a class="navbarLetter" href="register.html">Registrarse</a></li>
+        <li><a class="navbarLetter" href="index.html">Ingresar</a></li>
+    </ul>
+</nav>
+<!-- X -->
+<style>
+    .container-register-principal {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .container-register {
+
+        background-color: #2A2A2A;
+        width: 400px;
+        height: 500px;
+        border-radius: 15px;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    .letter-register {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .div-register {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input-register {
+        margin-top: 5px;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+
+    }
+
+    .container-name {
+        display: flex;
+    }
+
+    .container-title-register {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+
+        /* Letras */
+        color: white;
+        font-size: x-large;
+    }
+</style>
+
+<body id="body" class="body-register">
+
+    <div class="container-register-principal">
+
+        <div class="container-register">
+
+            <div class="container-title-register">
+                CREAR UNA CUENTA
+            </div>
+
+            <form class="form">
+                <div class="container-name">
+                    <div style="margin-right: 3%;">
+                        <label class="letter-form" for="Nombre">Nombre:</label>
+                        <input class="input-register" type="Nombre" id="Nombre" name="Nombre" required>
+                    </div>
+                    <div style="margin-left: 3%;">
+                        <label class="letter-form" for="Apellido">Apellido:</label>
+                        <input class="input-register" type="Apellido" id="Apellido" name="Apellido" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="letter-form" for="Correo">Correo:</label>
+                    <input class="input-form" type="Correo" id="Correo" name="Correo" required>
+                    <label class="letter-form" for="password">Contraseña:</label>
+                    <input class="input-form" type="password" id="password" name="password" required>
+                    <label class="letter-form" for="passwordConfirm">Confirmar Contraseña:</label>
+                    <input class="input-form" type="password" id="passwordConfirm" name="passwordConfirm" required>
+                    <button class="btn btn-submit" type="submit">Registrarse</button>
+                </div>
+
+                <div class="container-message">
+                    <p class="message-register">¿Ya tiene una cuenta?</p><a class="message-button"
+                        href="login.html">Inicie Sesión</a>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+
+
+
+<script src="functions-register.js"></script>
+<script src="sweetalert2/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>

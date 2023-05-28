@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
+
+
+</head>
+
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <img class="imgGame" src="images/logo_1.png"></img>
+        </li>
+        <li>
+            <h5 class="titleGame">SkillNet</h5>
+        </li>
+        <li><a class="navbarLetter" href="#">Inicio</a></li>
+        <li><a class="navbarLetter" href="#">Ranking</a></li>
+        <li><a class="navbarLetter" href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+<style>
+    .body {
+        background-color: #3C64D3;
+    }
+
+    .container-principal {}
+
+    .container-images {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    #isla-1 {
+        margin-top: 5vh;
+        margin-left: 5vh;
+    }
+
+    #isla-2 {
+        margin-top: 30vh;
+    }
+
+    #isla-3 {
+        margin-top: 60vh;
+        margin-right: 5vh;
+    }
+
+    .img {
+        max-width: 40vh;
+        height: auto;
+    }
+
+    .barco {
+        position: absolute;
+        width: 100px;
+        top: 33.5vh;
+        left: 10vh;
+    }
+</style>
+
+<script>
+    var barco = document.getElementById("barco");
+    console.log("AHH")
+    barco.addEventListener("click", function () {
+        barco.style.left = "50vh";
+    })
+</script>
+
+
+<body id="body" class="body">
+
+    <div class="container-images">
+        <a id="isla-1" href="information1_1.html"><img class="img" src="images/1-desbloqueada.png"></a>
+        <a id="isla-2"><img class="img" src="images/2-bloqueada.png"></a>
+        <a id="isla-3"><img class="img" src="images/3-bloqueada.png"></a>
+    </div>
+
+    <img id="barco" class="barco" src="images/barco.jpg">
+
+
+
+
+</body>
+
+
+
+
+<script src="functions2_2.js"></script>
+<script src="sweetalert2/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+
+</html>
