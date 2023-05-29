@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+</head>
+
+<body id="body" class="body" onload="loadOrden()">
+
+    <div class="container" id="main_container">
+
+        <div class="container-lives">
+            <div class="lives">
+
+            </div>
+        </div>
+
+
+        <div class="container-2" style="margin-block-end: 0%;">
+            <div class="titles" id="evaluando">
+                <button type="button" class="btn" id="button-devices">Dispositivo</button>
+
+            </div>
+        </div>
+
+
+        <div class="drop-targets" id="drop-targets">
+            <div class="box normalRespuesta" id="respuesta2_2" name="respuesta"></div>
+        </div>
+        <div class="instruccion-container">
+            <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
+        </div>
+
+        <div class="optionsDevice">
+
+        </div>
+
+
+        <div class="nivel-container invisible" id="nivel_completado">
+            <h1>¡Felicidades!</h1>
+            <h2>Nivel 2 de la Etapa 2 completado</h2>
+            <h3>Nuevos conocimientos adquiridos!</h3>
+
+            <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
+                <h4>Siguiente</h4>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-2" id="container_2">
+        <div class="progress-container" id="progress_container"></div>
+    </div>
+
+    <div class="container-information">
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+    </div>
+
+
+    <script src="functions3_1.js"></script>
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>

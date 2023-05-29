@@ -8,9 +8,6 @@
     <title>SkillsNet games</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
-
-
-
 </head>
 
 <nav>
@@ -30,19 +27,12 @@
 </nav>
 
 
-<style>
-    .letter-red {
-        font-weight: bold;
-    }
-</style>
-
-
 <body id="body" class="body" onload="loadOrden()">
 
     <div class="container" id="main_container">
 
         <div style="display: flex;">
-            <button type="button" class="btn button-information-lvl">Nivel 1 etapa 2</button>
+            <button type="button" class="btn button-information-lvl">Etapa 1 - nivel 2</button>
             <!-- <button type="button" class="btn button-information" id="btn-information"
                 onclick="showInstruccion()">i</button> -->
         </div>
@@ -54,12 +44,7 @@
         </div>
 
 
-        <div class="container-information">
 
-            <button type="button" class="btn button-information" id="btn-information"
-                onclick="showInstruccion()">i</button>
-
-        </div>
 
 
         <div class="drop-targets" id="drop-targets" style="margin-top: 3%;">
@@ -102,7 +87,7 @@
 
         <div class="nivel-container invisible" id="nivel_completado">
             <h1>¡Felicidades!</h1>
-            <h2>Nivel 1 completado</h2>
+            <h2>Nivel 2 de la Etapa 1 completado</h2>
             <h3>Nuevos conocimientos adquiridos!</h3>
 
             <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
@@ -114,8 +99,14 @@
     </div>
 
 
-    <div class="container-2" style="margin-top: 15%;" id="container_2">
+    <div class="container-progressbar" id="container_2">
         <div class="progress-container" id="progress_container"></div>
+    </div>
+
+    <div class="container-information">
+
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+
     </div>
 
 

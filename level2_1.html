@@ -31,19 +31,17 @@
 
 
 <style>
-    
+
 </style>
 
 
 <body id="body" class="body" onload="loadOrden()">
 
-    <div class="container" id="main_container">
+    <!-- <div style="display: flex; justify-content: center; margin-top: 1%;">
+        <button type="button" class="btn button-information-lvl">Etapa 1 - nivel 1</button>
+    </div> -->
 
-        <div style="display: flex;">
-            <button type="button" class="btn button-information-lvl">Etapa 1 - nivel 3</button>
-            <!-- <button type="button" class="btn button-information" id="btn-information"
-                onclick="showInstruccion()">i</button> -->
-        </div>
+    <div class="container" id="main_container">
 
         <div class="container-lives">
             <div class="lives">
@@ -52,72 +50,87 @@
         </div>
 
 
+        <div class="container-2" style="margin-block-end: 0%;">
+            <div class="titles" id="evaluando">
 
 
-
-        <div class="drop-targets" id="drop-targets" style="margin-top: 3%;">
-            <div>
-                <h5 style="color:white;    display: flex;
-                justify-content: center;">ID DE RED</h5>
-                <div class="box" style="background-color: white; border-radius: 15px;" id="button-devices">
-                </div>
             </div>
-            <div>
-                <h5 style="color:white;    display: flex;
-                justify-content: center;">BROADCAST</h5>
-                <div class="box normalRespuesta" id="respuesta1_1" name="respuesta"></div>
-            </div>
+        </div>
+
+        <style>
+
+        </style>
+
+        <div class="drop-targets" id="drop-targets">
+            <div id="salida" style="background-color: aliceblue; height: 100px;
+    width: 200px;"></div>
+            <div class="box normalRespuesta" id="respuesta2_2" name="respuesta"></div>
+            <div id="llegada" style="background-color: aliceblue; height: 100px;
+    width: 200px;"></div>
         </div>
         <div class="instruccion-container">
             <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
         </div>
 
-        <div class="optionesDevice-lvl1">
+        <div class="optionsCable">
             <div class="box" id="id_box_1">
-                <div style="background-color: #42DBB6; border-radius: 15px;" class="itemDevice" id="190.191.192.7"
-                    draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">190.191.192.7</p>
+                <div class="itemDevice" id="item_1" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="crossover" name="crossover" src="./images/etapa2-1/crossover.jpg" />
                 </div>
+                <button type="button" class="btn btn-cable" id="button-crossover">CROSSOVER</button>
             </div>
             <div class="box" id="id_box_2">
-                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="190.191.192.1"
-                    draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">190.191.192.1</p>
+                <div class="itemDevice" id="item_2" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="puntoapunto" name="puntoapunto"
+                        src="./images/etapa2-1/puntoapunto.jpg" />
                 </div>
+                <button type="button" class="btn btn-cable" id="button-crossover">PUNTO A PUNTO</button>
             </div>
             <div class="box" id="id_box_3">
-                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="190.191.192.2"
-                    draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">190.191.192.2</p>
+                <div class="itemDevice" id="item_3" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="serial" name="serial" src="./images/etapa2-1/serial.jpg" />
                 </div>
+                <button type="button" class="btn btn-cable" id="button-crossover">SERIAL</button>
             </div>
+            <div class="box" id="id_box_4">
+                <div class="itemDevice" id="item_4" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="consola" name="consola" src="./images/etapa2-1/consola.jpg" />
+                </div>
+                <button type="button" class="btn btn-cable" id="button-crossover">CONSOLA</button>
+            </div>
+
         </div>
 
         <div class="nivel-container invisible" id="nivel_completado">
             <h1>¡Felicidades!</h1>
-            <h2>Nivel 3 de la Etapa 1 completado</h2>
+            <h2>Nivel 1 de la Etapa 2 completado</h2>
             <h3>Nuevos conocimientos adquiridos!</h3>
 
             <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
                 <h4>Siguiente</h4>
             </div>
         </div>
+
+
     </div>
 
+    <style>
 
-    <div class="container-2" style="margin-top: 15%;" id="container_2">
+    </style>
+
+
+    <div class="container-2" id="container_2">
         <div class="progress-container" id="progress_container"></div>
     </div>
 
     <div class="container-information">
-
         <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
-
     </div>
 
 
 
-    <script src="functions1_3.js"></script>
+
+    <script src="functions2_1.js"></script>
     <script src="sweetalert2/sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>

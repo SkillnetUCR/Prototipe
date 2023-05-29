@@ -1,13 +1,16 @@
 const orden = [
-    { dispositivo: "190.191.192.0/29", respuesta: "190.191.192.7", ayuda: "La Clase A tiene un rango de:<br> 0.0.0.0 a 127.255.255.255" }
+    {
+        dispositivo: "190.191.192.0/29", respuesta: "190.191.192.7", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red."
+    },
+    { dispositivo: "190.191.192.1/29", respuesta: "190.191.192.1", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
+    { dispositivo: "190.191.192.2/29", respuesta: "190.191.192.2", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
 ];
 
 //Variable para medir el progreso
 
-let pasos = 1;
+let pasos = 3;
 const respuesta = document.getElementById("respuesta1_1");
 let evaluar = 0;
-let vidas = 3;
 
 function addLives() {
 
@@ -21,7 +24,7 @@ function addLives() {
     const img = document.createElement('img');
 
     // Asignar la ruta de la imagen
-    img.src = 'images/' + vidas + '-vidas.png';
+    img.src = 'images/' + sessionStorage.getItem('vidas') + '-vidas.png';
 
     img.id = "livesImg";
 
@@ -35,7 +38,7 @@ function loadOrden() {
     button.textContent = capitalizeFirstLetter(orden[evaluar].dispositivo)//Hace mayuscula la primer letra
 
     document.getElementById("instruccion").innerText =
-        "Selecciona la clase de red a la que corresponde la IP " +
+        "Seleccione el broadcast que corresponde a la IP " +
         orden[evaluar].dispositivo +
         " y arrastralo al recuadro de arriba";
 
@@ -168,11 +171,11 @@ function failAnswer(origin, draggable) {
         boxDestiny.classList.add("normalRespuesta");
     }, 1800);
 
-    vidas--;
+    sessionStorage.setItem('vidas', (sessionStorage.getItem('vidas') - 1));
 
     addLives();
 
-    if (vidas == 0) {
+    if (sessionStorage.getItem('vidas') == 0) {
 
         //Hay que cambiar este aviso por un reset o continuar o mostrar el menu
         Swal.fire({
@@ -191,7 +194,7 @@ function failAnswer(origin, draggable) {
                 toast.addEventListener("mouseleave", Swal.resumeTimer);
             },
         }).then(() => {
-            location.reload();
+            resetGame();
         });
 
 
@@ -200,11 +203,9 @@ function failAnswer(origin, draggable) {
 
 function resetGame() {
 
-    vidas = 0;
+    sessionStorage.setItem("vidas", 3);
 
     location.reload();
-
-
 }
 
 
@@ -315,5 +316,15 @@ function showInstruccion() {
 
 function siguienteNivel() {
 
-    window.location.href = "information2_2.html";
+    sessionStorage.setItem("isla-2", "desbloqueada");
+
+    window.location.href = "levelSelector.html";
+
+    alerta(
+        "La isla 2 fue desbloqueada!",
+        "¡Felicitaciones, vas muy bien!",
+        "success",
+        ""
+    );
+
 }

@@ -30,7 +30,7 @@ function addLives() {
     const img = document.createElement('img');
 
     // Asignar la ruta de la imagen
-    img.src = 'images/' + vidas + '-vidas.png';
+    img.src = 'images/' + sessionStorage.getItem('vidas') + '-vidas.png';
 
     img.id = "livesImg";
 
@@ -176,11 +176,11 @@ function failAnswer(origin, draggable) {
         boxDestiny.classList.add("normalRespuesta");
     }, 1800);
 
-    vidas--;
+    sessionStorage.setItem('vidas', (sessionStorage.getItem('vidas') - 1));
 
     addLives();
 
-    if (vidas == 0) {
+    if (sessionStorage.getItem('vidas') == 0) {
 
         //Hay que cambiar este aviso por un reset o continuar o mostrar el menu
         Swal.fire({
@@ -199,7 +199,7 @@ function failAnswer(origin, draggable) {
                 toast.addEventListener("mouseleave", Swal.resumeTimer);
             },
         }).then(() => {
-            location.reload();
+            resetGame();
         });
 
 
@@ -208,13 +208,10 @@ function failAnswer(origin, draggable) {
 
 function resetGame() {
 
-    vidas = 0;
+    sessionStorage.setItem("vidas", 3);
 
     location.reload();
-
-
 }
-
 
 //Alertas de respuestas
 function alerta(titulo, texto, icono, iconoColor, fondo) {
@@ -276,10 +273,11 @@ function update(currentActive, origin) {
         ((activeCircles.length - 1) / (stepCircles.length - 1)) * 99 + "%";
 
     if (currentActive == pasos) {
-        document.getElementById('nivel_completado').classList.remove('hide');
-        document.getElementById("options").classList.add('hide');
-        document.getElementById("drop-targets").classList.add('hide');
-        document.getElementById("container_2").classList.add('hide');
+        document.getElementById('nivel_completado').classList.remove('invisible');
+        document.getElementById("options").classList.add('invisible');
+        document.getElementById("drop-targets").classList.add('invisible');
+        document.getElementById("container_2").classList.add('invisible');
+        document.getElementById("id_box_4").classList.add('invisible');
     } else {
 
         alerta(
@@ -322,7 +320,19 @@ function showInstruccion() {
 }
 
 
+function siguienteNivel() {
 
+    sessionStorage.setItem("isla-3", "desbloqueada");
+
+    window.location.href = "levelSelector.html";
+
+    alerta(
+        "La isla 2 fue desbloqueada!",
+        "¡Felicitaciones, vas muy bien!",
+        "success",
+        ""
+    );
+}
 
 
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games info</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
+</head>
+
+<body class="body">
+
+
+    <div class="container" id="main_container">
+
+        <div class="container" id="container-principal-information">
+
+            <div class="container-2">
+
+                <div class="container-objectives">
+
+                    <div class="container-title">
+
+                        <h2>BROADCAST</h2>
+
+                    </div>
+
+                    <div class="container-objective">
+                        <div>
+
+                            <div class="container-subtitle">
+                                <p class="text-objectives">La broadcast IP permite enviar paquetes de datos a través de
+                                    una red de ordenadores a todos los usuarios de una red local. En cuanto a las
+                                    direcciones individuales de cada uno, no son
+                                    necesarias para realizar la trasmisión de datos. En caso de que sea necesario, la
+                                    direccion de broadcast se puede calcular fácilmente.</p>
+                            </div>
+                            <div class="container-subtitle">
+                                <p class="text-class"> Para obtener el broadcast solamente tenemos que tomar el id de
+                                    red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de
+                                    red.</p>
+                            </div>
+                            <div class="container-ejemplo" style="margin-top: 2%;">
+                                <p class="text-objectives"> Ejemplo:</p>
+                                <p class="text-objectives"> Id de red: 220.221.222.0/30</p>
+                                <p class="text-objectives">Salto: Se obtiene elevado el "2" a la cantidad de bits que se
+                                    encuentran del lado derecho del slash y en el mismo octeto. En este caso, el id de
+                                    red tiene un slash de 30 por lo que simplemente tenemos 2 bits hacia la derecha del
+                                    slash y en el misma octeto y al resultado le restamos 1, por lo tanto 2^2 = 4 y 4-1
+                                    = 3. Entonces Salto = 3.</p>
+                                <div class="container-result">
+                                    <p class="text-objectives">Por lo tanto, el Broadcast es: 220.221.222.
+                                    <p class="text-objectives" style="color:yellow;">3</p>
+                                    <p class="text-objectives">/30</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin de info -->
+
+        <div>
+            <a type="button" class="btn next2_2" href="level1_3.html">Siguiente</a>
+        </div>
+
+    </div>
+
+    <script src="functions.js"></script>
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>

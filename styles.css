@@ -41,7 +41,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-block-end: 5%;
 }
 
@@ -271,9 +271,9 @@ h1 {
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 30px;
     max-width: 100%;
-    width: 54rem;
+    /* width: 54rem; */
+    width: 50%;
     display: inherit;
 }
 
@@ -288,6 +288,14 @@ h1 {
     z-index: -1;
     transition: 0.4s ease;
     display: inherit;
+}
+
+.container-progressbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
 }
 
 .circle {
@@ -554,12 +562,8 @@ h1 {
 
 
 .container-information {
-    position: absolute;
-    /* top: 93vh;
-    left: 1vh; */
-    position: absolute;
-    top: 90vh;
-    left: 3vh;
+    position: relative;
+    margin-left: 5vh;
 }
 
 /* NavBar */
@@ -625,7 +629,8 @@ li {
 
 /* INFORMACION */
 .container-objectives {
-    margin-left: 25px;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .next2_2 {
@@ -637,7 +642,7 @@ li {
 
 #container-principal-information {
     background-color: #5A5A5A;
-    width: 80vh;
+    width: 85vh;
     border-radius: 10px;
 }
 
@@ -750,6 +755,16 @@ form {
 
 /* NIVEL 1 */
 
+.letter-red {
+    font-weight: bold;
+}
+
+.button-back {
+    BACKGROUND-COLOR: #2A2A2A;
+    font-weight: bold;
+    padding: 8px 16px px;
+}
+
 .optionesDevice-lvl1 {
 
     display: flex;
@@ -768,12 +783,6 @@ form {
     margin-right: 1%;
 }
 
-.text-subtitle {
-    font-weight: 600;
-    color: white;
-
-    margin-right: 1%;
-}
 
 .container-subtitle {
     display: flex;
@@ -792,4 +801,67 @@ form {
     color: white;
     margin-block-end: 3%;
     margin-top: 3%;
+}
+
+
+/*Informacion 1 2*/
+
+.container-result {
+    display: flex;
+}
+
+p {
+    font-weight: 600;
+    color: white;
+    line-height: 1.7;
+
+}
+
+.container-ejemplo {}
+
+/* FIGURA 9.12 */
+
+.container-grid {
+    display: grid;
+    /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10%; */
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.grid-item {
+    display: grid;
+    justify-items: center;
+}
+
+.grid-content {
+    margin-bottom: 15%;
+}
+
+/* Etapa 2 lvl 1 */
+.optionsCable {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
+    margin-top: 2%;
+}
+
+.btn-cable {
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.imagen-contenida {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+.letter-red {
+    font-weight: bold;
 }

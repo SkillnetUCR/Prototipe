@@ -10,7 +10,7 @@ const orden = [
 let pasos = 3;
 const respuesta = document.getElementById("respuesta1_1");
 let evaluar = 0;
-let vidas = 3;
+let vidas = sessionStorage.getItem('vidas');
 
 function addLives() {
 
@@ -24,7 +24,7 @@ function addLives() {
     const img = document.createElement('img');
 
     // Asignar la ruta de la imagen
-    img.src = 'images/' + vidas + '-vidas.png';
+    img.src = 'images/' + sessionStorage.getItem('vidas') + '-vidas.png';
 
     img.id = "livesImg";
 
@@ -113,16 +113,6 @@ function dragOver(event) {
     event.preventDefault();
 }
 
-// function dragEnter(event) {
-//     event.target.classList.add('hovered');
-//     //event.target.classList.add("drag-over");
-// }
-
-// function dragLeave(event) {
-//     event.target.classList.remove("hovered");
-// }
-
-
 function drop(event) {
     event.target.classList.remove("drag-over");
     const id = event.dataTransfer.getData("text");
@@ -171,11 +161,11 @@ function failAnswer(origin, draggable) {
         boxDestiny.classList.add("normalRespuesta");
     }, 1800);
 
-    vidas--;
+    sessionStorage.setItem('vidas', (sessionStorage.getItem('vidas') - 1));
 
     addLives();
 
-    if (vidas == 0) {
+    if (sessionStorage.getItem('vidas') == 0) {
 
         //Hay que cambiar este aviso por un reset o continuar o mostrar el menu
         Swal.fire({
@@ -194,7 +184,7 @@ function failAnswer(origin, draggable) {
                 toast.addEventListener("mouseleave", Swal.resumeTimer);
             },
         }).then(() => {
-            location.reload();
+            resetGame();
         });
 
 
@@ -203,10 +193,9 @@ function failAnswer(origin, draggable) {
 
 function resetGame() {
 
-    vidas = 0;
+    sessionStorage.setItem("vidas", 3);
 
     location.reload();
-
 
 }
 
@@ -318,5 +307,5 @@ function showInstruccion() {
 
 function siguienteNivel() {
 
-    window.location.href = "information1_2.html";
+    window.location.href = "9.17.html";
 }

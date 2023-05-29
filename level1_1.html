@@ -17,8 +17,8 @@
     <ul>
         <li class="liImgGame">
             <a href="index.html">
-            <img class="imgGame" src="images/logo_1.png"></img>
-        </a>
+                <img class="imgGame" src="images/logo_1.png"></img>
+            </a>
         </li>
         <li>
             <h5 class="titleGame">SkillNet</h5>
@@ -41,25 +41,13 @@
 </nav>
 
 
-<style>
-    .letter-red {
-        font-weight: bold;
-    }
-
-    .button-back {
-        BACKGROUND-COLOR: #2A2A2A;
-        font-weight: bold;
-        padding: 8px 16px px;
-    }
-</style>
-
 
 <body id="body" class="body" onload="loadOrden()">
 
     <div class="container" id="main_container">
 
         <div>
-            <button type="button" class="btn button-information-lvl">Nivel 1 etapa 1</button>
+            <button type="button" class="btn button-information-lvl">Etapa 1 - nivel 1</button>
         </div>
 
 
@@ -68,16 +56,6 @@
 
             </div>
         </div>
-
-
-
-        <div class="container-information">
-
-            <button type="button" class="btn button-information" id="btn-information"
-                onclick="showInstruccion()">i</button>
-
-        </div>
-
 
         <div class="drop-targets" id="drop-targets" style="margin-top: 3%;">
             <div>
@@ -119,20 +97,24 @@
 
         <div class="nivel-container invisible" id="nivel_completado">
             <h1>¡Felicidades!</h1>
-            <h2>Etapa 1 del nivel 1 completado</h2>
+            <h2>Nivel 1 de la Etapa 1 completado</h2>
             <h3>Nuevos conocimientos adquiridos!</h3>
 
             <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
                 <h4>Siguiente</h4>
             </div>
         </div>
-
-
     </div>
 
 
-    <div class="container-2" style="margin-top: 15%;" id="container_2">
+    <div class="container-progressbar" id="container_2">
         <div class="progress-container" id="progress_container"></div>
+    </div>
+
+    <div class="container-information">
+
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+
     </div>
 
 

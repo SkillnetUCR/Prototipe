@@ -68,21 +68,15 @@
     }
 </style>
 
-<script>
-    var barco = document.getElementById("barco");
-    console.log("AHH")
-    barco.addEventListener("click", function () {
-        barco.style.left = "50vh";
-    })
-</script>
 
 
-<body id="body" class="body">
+
+<body id="body" class="body" onload="levelPermission()">
 
     <div class="container-images">
-        <a id="isla-1" href="information1_1.html"><img class="img" src="images/1-desbloqueada.png"></a>
-        <a id="isla-2"><img class="img" src="images/2-bloqueada.png"></a>
-        <a id="isla-3"><img class="img" src="images/3-bloqueada.png"></a>
+        <a id="isla-1" href="9.11.html"><img class="img" src="images/1-desbloqueada.png"></a>
+        <a id="isla-2" onclick="redirectionIsla2()"></a>
+        <a id="isla-3" onclick="redirectionIsla3()"></a>
     </div>
 
     <img id="barco" class="barco" src="images/barco.jpg">
@@ -95,7 +89,7 @@
 
 
 
-<script src="functions2_2.js"></script>
+<script src="function-levelSelector.js"></script>
 <script src="sweetalert2/sweetalert2.all.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>

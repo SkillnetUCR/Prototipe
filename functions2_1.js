@@ -1,14 +1,31 @@
 const orden = [
-    { dispositivo: "127.191.193.0/24", respuesta: "255.255.255.0", ayuda: "La Clase C tiene una mascara predeterminada de 255.255.255.0:<br>Tienen de 192 a 223 en su primer octeto." },
-    { dispositivo: "129.86.0.0/7", respuesta: "254.0.0.0", ayuda: "La Clase A tiene una mascara predeterminada de 255.0.0.0:<br>Tienen de 0 a 127 en su primer octeto." },
-    { dispositivo: "193.191.0.1/16", respuesta: "255.255.0.0", ayuda: "La Clase B tiene una mascara predeterminada de 255.255.0.0:<br>Tienen de 128 a 191 en su primer octeto." },
+    {
+        dispositivo: "crossover", ayuda: "Se utilizan normalmente para conectar entre si dos equipos del mismo tipo."
+    },
+    {
+        dispositivo: "puntoapunto", ayuda: "Se utilizan normalmente para conectar entre sí dos equipos distintos dentro de una red de área local"
+    },
+    { dispositivo: "serial", ayuda: "Se utilizan normalmente para conectar entre sí dos routers ubicados en diferentes LAN." },
+    { dispositivo: "consola", ayuda: "Se utilizan normalmente para conectar entre sí un router con una PC." }
+];
+
+const devices = [
+    {
+        llegada: "laptop.jpeg", salida: "router.jpg"
+    },
+    {
+        llegada: "router.jpg", salida: "laptop.jpeg"
+    },
+    { llegada: "router.jpg", salida: "router.jpg" },
+    { llegada: "laptop.jpeg", salida: "laptop.jpeg" }
 ];
 
 //Variable para medir el progreso
 
-let pasos = 3;
-const respuesta = document.getElementById("respuesta1_1");
+let pasos = 4;
+const respuesta = document.getElementById("respuesta2_2");
 let evaluar = 0;
+
 
 function addLives() {
 
@@ -28,21 +45,54 @@ function addLives() {
 
     // Agregar la imagen al div
     livesDiv.appendChild(img);
+
+
 }
 
 function loadOrden() {
     addLives();
+    loadDevice();
+
     const button = document.getElementById("button-devices");
+
     button.textContent = capitalizeFirstLetter(orden[evaluar].dispositivo)//Hace mayuscula la primer letra
 
     document.getElementById("instruccion").innerText =
-        "Selecciona la mascara a la que corresponde la IP " +
+        "Selecciona el " +
         orden[evaluar].dispositivo +
         " y arrastralo al recuadro de arriba";
-
-
 }
 
+
+
+function loadDevice() {
+    const salidaDiv = document.querySelector('#salida');
+    const llegadaDiv = document.querySelector('#llegada');
+
+    if (salidaDiv.lastChild) {
+
+        salidaDiv.removeChild(salidaDiv.lastChild);
+        llegadaDiv.removeChild(llegadaDiv.lastChild);
+    }
+
+    // Crear un elemento img
+    const imgL = document.createElement('img');
+    const imgS = document.createElement('img');
+
+    console.log(devices[evaluar].llegada + '.jpg');
+
+    console.log(devices[evaluar].salida + '.jpg');
+
+    imgL.src = 'images/etapa2-1/' + devices[evaluar].llegada;
+    imgL.id = devices[evaluar].llegada;
+    imgL.classList.add("imagen-contenida");
+    llegadaDiv.appendChild(imgL);
+
+    imgS.src = 'images/etapa2-1/' + devices[evaluar].salida;
+    imgS.classList.add("imagen-contenida");
+    imgS.id = devices[evaluar].salida;
+    salidaDiv.appendChild(imgS);
+}
 
 
 /* Los eventos del item del dispositivo */
@@ -69,25 +119,27 @@ function dragEnd(event) {
 /* drop targets */
 let boxes = document.querySelectorAll(".box");
 
-boxes[1].addEventListener('drop', drop);
-boxes[1].addEventListener('dragover', dragOver);
+boxes[0].addEventListener('drop', drop);
+boxes[0].addEventListener('dragover', dragOver);
 
 
 function deleteBox(origin) {//Se encarga de eliminar el contenedor y limpiar el contenedor de respuesta
 
     let boxes = document.querySelectorAll(".box");
     let father = document.querySelector("#" + origin).parentNode.id;
-
-    let newOrigin = document.querySelector("#respuesta1_1")
+    let newOrigin = document.querySelector("#respuesta2_2")
 
 
     for (let i = 0; i < boxes.length; i++) {
-        if (boxes[i].id == origin) {
+
+        if (boxes[i].id == father) {
 
             boxes[i].remove();//Con esto eliminamos la caja contenedora original
-            const divPadre = document.getElementById('respuesta1_1');
+            const divPadre = document.getElementById('respuesta2_2');
             const primerHijo = divPadre.lastChild;
 
+            primerHijo.style.width = 96 + "%";
+            primerHijo.style.height = 96 + "%";
 
 
             newOrigin.classList.add("correctAnswer");
@@ -132,7 +184,9 @@ function drop(event) {
 
     event.target.appendChild(draggable);
 
-    if (orden[evaluar].respuesta == id) {//es para evitar que cuando es erroneo realice el evento dos veces
+
+
+    if (orden[evaluar].dispositivo == id) {//es para evitar que cuando es erroneo realice el evento dos veces
 
         evaluar++;
         update(evaluar, origin);
@@ -146,11 +200,9 @@ function drop(event) {
 }
 
 function failAnswer(origin, draggable) {
-    var boxDestiny = document.getElementById("respuesta1_1")
+    var boxDestiny = document.getElementById("respuesta2_2")
     boxDestiny.classList.remove("normalRespuesta");
     boxDestiny.classList.add("incorrectAnswer");
-
-    var id = document.getElementById('respuesta1_1').lastElementChild.getAttribute("id");
 
     alerta(
         "Respuesta incorrecta!",
@@ -158,9 +210,6 @@ function failAnswer(origin, draggable) {
         "error",
         ''
     );
-
-    //Si el hijo es Una IP X entonces
-
     setTimeout(() => {
         const originContainer = document.getElementById(origin);
         originContainer.appendChild(draggable);
@@ -204,8 +253,8 @@ function resetGame() {
     sessionStorage.setItem("vidas", 3);
 
     location.reload();
-
 }
+
 
 
 //Alertas de respuestas
@@ -266,12 +315,13 @@ function update(currentActive, origin) {
     const activeCircles = document.querySelectorAll(".active");
     progress.style.width =
         ((activeCircles.length - 1) / (stepCircles.length - 1)) * 99 + "%";
-
     if (currentActive == pasos) {
+
         document.getElementById('nivel_completado').classList.remove('invisible');
         document.getElementById("options").classList.add('invisible');
         document.getElementById("drop-targets").classList.add('invisible');
         document.getElementById("container_2").classList.add('invisible');
+        document.getElementById("id_box_4").classList.add('invisible');
     } else {
 
         alerta(
@@ -315,5 +365,12 @@ function showInstruccion() {
 
 function siguienteNivel() {
 
-    window.location.href = "9.18.html";
+
+    window.location.href = "9.22.html";
+
+
 }
+
+
+
+
