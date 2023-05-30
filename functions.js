@@ -7,6 +7,7 @@ const ayuda_nivel_2 = {
         "Obtener la primera ip utilizable es muy sencillo, solo tienes que sumarle un 1 al octeto en que se esta trabajando en el id de red.",
     ultima: "Para obtener la última ip utilizable solo debes tomar el id de red, sumarle el salto de red al octeto que se esta trabajando y restarle un 1 al último octeto.",
     broadcast:
+
         "El BROADCAST se obtiene al tomar el id de red y sumarle el salto al octeto que se esta trabajando.",
     clasea: "La red Clase A inicia con un indentificador comprendido entre 0 y 127.",
     claseb: "La red Clase B inicia con un indentificador comprendido entre 128 y 191.",

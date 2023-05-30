@@ -25,7 +25,7 @@ function addLives() {
     img.src = 'images/' + sessionStorage.getItem('vidas') + '-vidas.png';
 
     img.id = "livesImg";
-
+ 
     // Agregar la imagen al div
     livesDiv.appendChild(img);
 }
