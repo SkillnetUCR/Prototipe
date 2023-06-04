@@ -1,7 +1,7 @@
 const orden = [
-    { dispositivo: "127.191.193.0/24", respuesta: "255.255.255.0", ayuda: "La Clase C tiene una mascara predeterminada de 255.255.255.0:<br>Tienen de 192 a 223 en su primer octeto." },
-    { dispositivo: "129.86.0.0/7", respuesta: "254.0.0.0", ayuda: "La Clase A tiene una mascara predeterminada de 255.0.0.0:<br>Tienen de 0 a 127 en su primer octeto." },
-    { dispositivo: "193.191.0.1/16", respuesta: "255.255.0.0", ayuda: "La Clase B tiene una mascara predeterminada de 255.255.0.0:<br>Tienen de 128 a 191 en su primer octeto." },
+    { dispositivo: "120.0.0.0", respuesta: "255.0.0.0", ayuda: "La Clase C tiene una mascara predeterminada de 255.255.255.0:<br>Tienen de 192 a 223 en su primer octeto." },
+    { dispositivo: "150.86.0.0", respuesta: "255.255.0.0", ayuda: "La Clase A tiene una mascara predeterminada de 255.0.0.0:<br>Tienen de 0 a 127 en su primer octeto." },
+    { dispositivo: "200.210.210.0", respuesta: "255.255.255.0", ayuda: "La Clase B tiene una mascara predeterminada de 255.255.0.0:<br>Tienen de 128 a 191 en su primer octeto." },
 ];
 
 //Variable para medir el progreso
@@ -25,7 +25,7 @@ function addLives() {
     img.src = 'images/' + sessionStorage.getItem('vidas') + '-vidas.png';
 
     img.id = "livesImg";
- 
+
     // Agregar la imagen al div
     livesDiv.appendChild(img);
 }
@@ -203,7 +203,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 
 }
 
@@ -316,4 +316,16 @@ function showInstruccion() {
 function siguienteNivel() {
 
     window.location.href = "9.18.html";
+}
+
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
 }

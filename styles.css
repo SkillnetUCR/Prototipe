@@ -10,13 +10,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 16px;
-    BACKGROUND-COLOR: #464646;
+    BACKGROUND-COLOR: #01424b;
     /* background-color: #464646; */
-    overflow: hidden;
-
-
-
+    overflow-x: hidden;
 }
+
 
 h1 {
     color: #000000;
@@ -42,7 +40,7 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
-    margin-block-end: 5%;
+
 }
 
 .container-level {
@@ -458,7 +456,7 @@ h1 {
 
 }
 
-/* Index2_2 */
+/* nivel2_2 */
 
 
 .invisible {
@@ -517,28 +515,44 @@ h1 {
 
 .normalRespuesta {
     border: dashed 2px;
-    BACKGROUND-COLOR: #4A4A4A;
+
     border-color: white;
     BORDER-RADIUS: 8px;
 
 }
 
 .button-information {
-    BACKGROUND-COLOR: #4A4A4A;
-    color: white;
+    BACKGROUND-COLOR: #01424b;
+    /* color: white;
     font-weight: bold;
     padding: 22px 45px;
-    font-size: xx-large;
+    font-size: xx-large; */
     ;
     /* padding: 16px 32px; */
-    border: solid;
+    /* border: solid;
     border-color: white;
-    border-width: 1px;
+    border-width: 1px; */
+}
+
+.instruccion-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #instruccion-container {
     color: white;
     display: hidden;
+
+
+}
+
+.video {
+    margin-top: 1%;
+    width: 500px;
+    border: solid;
+    border-color: black;
 }
 
 .invisible {
@@ -556,7 +570,7 @@ h1 {
 }
 
 #container_2 {
-    margin-top: 5%;
+    margin-top: 3%;
 
 }
 
@@ -627,6 +641,29 @@ li {
     padding: 8px 16px px;
 }
 
+
+/* Footer */
+
+footer {
+    background-color: #2A2A2A;
+    color: white;
+
+
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: end;
+}
+
+.logoUniversidad {
+
+    width: 120px;
+    height: 120px;
+
+}
+
 /* INFORMACION */
 .container-objectives {
     padding-left: 8%;
@@ -638,10 +675,11 @@ li {
     color: black;
     font-weight: bold;
     margin-top: 15PX;
+    margin-block-end: 5px;
 }
 
 #container-principal-information {
-    background-color: #5A5A5A;
+    background-color: #3d767d;
     width: 85vh;
     border-radius: 10px;
 }
@@ -666,9 +704,10 @@ li {
 }
 
 .button-information-lvl {
-    BACKGROUND-COLOR: #4A4A4A;
+    BACKGROUND-COLOR: #01424b;
     color: white;
     font-weight: bold;
+    font-size: x-large;
     padding: 8px 16px;
     border: solid;
     border-color: white;
@@ -676,10 +715,129 @@ li {
     margin-left: 5px;
 }
 
+/* Registro elementos */
+
+.container-register-principal {
+    display: flex;
+    align-items: center;
+
+}
+
+.form-register {
+    background-color: #2A2A2A;
+    border-radius: 15px;
+    margin-top: 5%;
+    width: 60%;
+}
+
+.container-register {
+
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.letter-register {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.div-register {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-register {
+    margin-top: 1px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+}
+
+.container-name {
+    display: flex;
+}
+
+.container-title-register {
+    display: flex;
+    justify-content: center;
+    margin-block-end: 3%;
+
+    /* Letras */
+    color: white;
+    font-size: x-large;
+}
+
+
+.body-register {
+    position: relative;
+    z-index: 1;
+    overflow-x: initial;
+}
+
+.body-register::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/logo_1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container-messaje-register-principal {
+
+
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.container-messaje-register-secundario {
+
+    margin-right: 40%;
+}
+
+.title-register-text {
+    font-size: xx-large;
+    font-weight: 600;
+}
 
 /* LOGIN ELEMENTOS */
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    filter: invert(100%);
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+.container-icon {
+    display: flex;
+    align-items: center;
+}
 
 .body-login {
+    background-image: url(./images/Background.png);
+    background-size: 1920px 1080px;
+
+}
+
+.body-register {
     background-image: url(./images/Background.png);
     background-size: 1920px 1080px;
 
@@ -804,16 +962,18 @@ form {
 }
 
 
-/*Informacion 1 2*/
+/*Informacion 9.12*/
 
 .container-result {
     display: flex;
 }
 
 p {
-    font-weight: 600;
+
     color: white;
     line-height: 1.7;
+    font-family: inherit;
+    font-size: larger;
 
 }
 
@@ -864,4 +1024,48 @@ p {
 
 .letter-red {
     font-weight: bold;
+}
+
+
+/* ETAPA 2 NIVEL 1 */
+.salida {
+    background-color: aliceblue;
+    height: 100px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+
+/* Level Selector */
+
+.container-principal {}
+
+.container-images {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#isla-1 {
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
+
+#isla-2 {
+    margin-top: 30vh;
+}
+
+#isla-3 {
+    margin-top: 60vh;
+    margin-right: 5vh;
+}
+
+.img {
+    max-width: 40vh;
+    height: auto;
 }

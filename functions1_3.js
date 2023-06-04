@@ -2,8 +2,8 @@ const orden = [
     {
         dispositivo: "190.191.192.0/29", respuesta: "190.191.192.7", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red."
     },
-    { dispositivo: "190.191.192.1/29", respuesta: "190.191.192.1", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
-    { dispositivo: "190.191.192.2/29", respuesta: "190.191.192.2", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
+    { dispositivo: "200.200.200.0/30", respuesta: "200.200.200.3", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
+    { dispositivo: "198.198.198.16/28", respuesta: "198.198.198.31", ayuda: "Para el broadcast tenemos que tomar el id de red y sumarle el salto de red, por lo tanto debemos saber como obtener el salto de red." },
 ];
 
 //Variable para medir el progreso
@@ -205,7 +205,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 }
 
 
@@ -247,8 +247,7 @@ function getPasos() {
 }
 
 
-//Barra de progreso
-// const progress = document.getElementById("progress");
+const progress = document.getElementById("progress");
 const stepCircles = document.querySelectorAll(".circle");
 let currentActive = 1;
 
@@ -265,8 +264,8 @@ function update(currentActive, origin) {
     });
 
     const activeCircles = document.querySelectorAll(".active");
-    // progress.style.width =
-    //     ((activeCircles.length - 1) / (stepCircles.length - 1)) * 99 + "%";
+    progress.style.width =
+        ((activeCircles.length - 1) / (stepCircles.length - 1)) * 99 + "%";
 
     if (currentActive == pasos) {
         document.getElementById('nivel_completado').classList.remove('invisible');
@@ -327,4 +326,15 @@ function siguienteNivel() {
         ""
     );
 
+}
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
 }

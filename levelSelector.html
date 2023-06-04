@@ -16,71 +16,29 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <img class="imgGame" src="images/logo_1.png"></img>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
     </ul>
 </nav>
 
-<style>
-    .body {
-        background-color: #3C64D3;
-    }
-
-    .container-principal {}
-
-    .container-images {
-        height: 100vh;
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
-    }
-
-    #isla-1 {
-        margin-top: 5vh;
-        margin-left: 5vh;
-    }
-
-    #isla-2 {
-        margin-top: 30vh;
-    }
-
-    #isla-3 {
-        margin-top: 60vh;
-        margin-right: 5vh;
-    }
-
-    .img {
-        max-width: 40vh;
-        height: auto;
-    }
-
-    .barco {
-        position: absolute;
-        width: 100px;
-        top: 33.5vh;
-        left: 10vh;
-    }
-</style>
 
 
 
-
-<body id="body" class="body" onload="levelPermission()">
+<body id="body" class="body" onload="levelPermission()" style="background-color: #3C64D3;">
 
     <div class="container-images">
         <a id="isla-1" href="9.11.html"><img class="img" src="images/1-desbloqueada.png"></a>
         <a id="isla-2" onclick="redirectionIsla2()"></a>
         <a id="isla-3" onclick="redirectionIsla3()"></a>
     </div>
-
-    <img id="barco" class="barco" src="images/barco.jpg">
-
 
 
 

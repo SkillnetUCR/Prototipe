@@ -16,86 +16,43 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <img class="imgGame" src="images/logo_1.png"></img>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
-
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
     </ul>
+
     <ul>
-        <li><a class="navbarLetter" href="register.html">Registrarse</a></li>
-        <li><a class="navbarLetter" href="index.html">Ingresar</a></li>
+        <li><a class="navbarLetter container-icon" href="register.html">Registrarse <img class="icon"
+                    src="images/iconRegister.png"></img></a></li>
+        <li><a class="navbarLetter container-icon" href="login.html">Ingresar <img class="icon"
+                    src="images/iconLogin.png"></img></a>
+        </li>
     </ul>
 </nav>
 <!-- X -->
-<style>
-    .container-register-principal {
-        display: flex;
-        justify-content: flex-start;
 
-    }
-
-    .container-register {
-
-        background-color: #2A2A2A;
-        width: 400px;
-        height: 500px;
-        border-radius: 15px;
-        margin-top: 10%;
-        margin-left: 10%;
-    }
-
-    .letter-register {
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    .div-register {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .input-register {
-        margin-top: 5px;
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 20px;
-
-    }
-
-    .container-name {
-        display: flex;
-    }
-
-    .container-title-register {
-        margin-top: 5%;
-        display: flex;
-        justify-content: center;
-
-        /* Letras */
-        color: white;
-        font-size: x-large;
-    }
-</style>
 
 <body id="body" class="body-register">
+
+    <div class="imagen-fondo2"></div>
 
     <div class="container-register-principal">
 
         <div class="container-register">
 
-            <div class="container-title-register">
-                CREAR UNA CUENTA
-            </div>
 
-            <form class="form">
+
+            <form class="form-register ">
+                <div class="container-title-register">
+                    CREAR UNA CUENTA
+                </div>
                 <div class="container-name">
                     <div style="margin-right: 3%;">
                         <label class="letter-form" for="Nombre">Nombre:</label>
@@ -107,6 +64,23 @@
                     </div>
                 </div>
                 <div>
+
+                    <div class="container-name">
+                        <div style="margin-right: 3%;">
+                            <label class="letter-form" for="Correo">Edad:</label>
+                            <input class="input-register" type="date" id="Edad" name="Edad" required>
+                        </div>
+
+                        <div style="margin-left: 3%;">
+                            <label class="letter-form" for="Genero">Genero:</label>
+                            <select class="input-register" id="Genero" name="Genero" required>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="NoTiene" selected>No especificado</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <label class="letter-form" for="Correo">Correo:</label>
                     <input class="input-form" type="Correo" id="Correo" name="Correo" required>
                     <label class="letter-form" for="password">Contraseña:</label>
@@ -123,15 +97,45 @@
 
             </form>
 
-
         </div>
 
+
+        <div class="container-messaje-register-principal">
+
+            <div class="container-messaje-register-secundario">
+                <p class="title-register-text">SkillNet</p>
+                <p>Desarrollar destrezas y conocimientos en el área de redes de datos en el profesorado a través del uso
+                    de
+                    SkillNet para
+                    la adquisición de nuevas habilidades en tecnologías digitales.</p>
+                <BR>
+                <p>Enseñar al profesorado sobre el autoaprendizaje por medio de las TIC, con el propósito de fomentarles
+                    el
+                    aprendizaje
+                    autónomo.</p>
+
+            </div>
+
+        </div>
     </div>
+
+
+
+    <style>
+
+    </style>
+
 
 
 
 
 </body>
+
+
+<footer class="footer">
+    <img src="images/logoUniversidadNacionalDeLaPlata.svg" class="logoUniversidad">
+    <img src="images/logoUniversidadCostaRica.png" class="logoUniversidad">
+</footer>
 
 
 

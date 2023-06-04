@@ -5,7 +5,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 
 }
 
@@ -54,4 +54,17 @@ function showInstruccion() {
 function siguienteNivel() {
 
     window.location.href = "9.17.html";
+}
+
+
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
 }

@@ -1,9 +1,9 @@
 const orden = [
     {
-        dispositivo: "crossover", ayuda: "Se utilizan normalmente para conectar entre si dos equipos del mismo tipo."
+        dispositivo: "puntoapunto", ayuda: "Se utilizan normalmente para conectar entre sí dos equipos distintos dentro de una red de área local"
     },
     {
-        dispositivo: "puntoapunto", ayuda: "Se utilizan normalmente para conectar entre sí dos equipos distintos dentro de una red de área local"
+        dispositivo: "crossover", ayuda: "Se utilizan normalmente para conectar entre si dos equipos del mismo tipo."
     },
     { dispositivo: "serial", ayuda: "Se utilizan normalmente para conectar entre sí dos routers ubicados en diferentes LAN." },
     { dispositivo: "consola", ayuda: "Se utilizan normalmente para conectar entre sí un router con una PC." }
@@ -11,13 +11,13 @@ const orden = [
 
 const devices = [
     {
-        llegada: "laptop.jpeg", salida: "router.jpg"
+        llegada: "router.jpg", salida: "switch.png"
     },
     {
-        llegada: "router.jpg", salida: "laptop.jpeg"
+        llegada: "laptop.jpeg", salida: "laptop.jpeg"
     },
     { llegada: "router.jpg", salida: "router.jpg" },
-    { llegada: "laptop.jpeg", salida: "laptop.jpeg" }
+    { llegada: "laptop.jpeg", salida: "router.jpg" }
 ];
 
 //Variable para medir el progreso
@@ -252,7 +252,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 }
 
 
@@ -374,3 +374,14 @@ function siguienteNivel() {
 
 
 
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
+}

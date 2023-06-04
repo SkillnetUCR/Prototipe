@@ -13,16 +13,26 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <a href="index.html">
-                <img class="imgGame" src="images/logo_1.png"></img>
-            </a>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a type="button" class="btn button-back" href="level1_1.html"><img style="width: 30px;"
+                    src="./images/volver.png"></a>
+        </li>
+        <li>
+            <a type="button" class="btn button-back" href="levelSelector.html"><img style="width: 30px;"
+                    src="./images/hogar.png"></a>
+        </li>
     </ul>
 </nav>
 
@@ -66,21 +76,21 @@
 
         <div class="optionesDevice-lvl1">
             <div class="box" id="id_box_1">
-                <div style="background-color: #42DBB6; border-radius: 15px;" class="itemDevice" id="255.255.255.0"
+                <div style="background-color: #42DBB6; border-radius: 15px;" class="itemDevice" id="255.0.0.0"
                     draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">255.255.255.0</p>
+                    <p class="letter-red">255.0.0.0</p>
                 </div>
             </div>
             <div class="box" id="id_box_2">
-                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="254.0.0.0"
+                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="255.255.0.0"
                     draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">254.0.0.0</p>
+                    <p class="letter-red">255.255.0.0</p>
                 </div>
             </div>
             <div class="box" id="id_box_3">
-                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="255.255.0.0"
+                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="255.255.255.0"
                     draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">255.255.0.0</p>
+                    <p class="letter-red">255.255.255.0</p>
                 </div>
             </div>
         </div>
@@ -104,9 +114,8 @@
     </div>
 
     <div class="container-information">
-
-        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
-
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
+                src="images/information.png" /></button>
     </div>
 
 

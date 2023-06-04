@@ -16,22 +16,31 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <a href="index.html">
-                <img class="imgGame" src="images/logo_1.png"></img>
-            </a>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a type="button" class="btn button-back" href="level1_2.html"><img style="width: 30px;"
+                    src="./images/volver.png"></a>
+        </li>
+        <li>
+            <a type="button" class="btn button-back" href="levelSelector.html"><img style="width: 30px;"
+                    src="./images/hogar.png"></a>
+        </li>
     </ul>
 </nav>
 
-
 <style>
-    
+
 </style>
 
 
@@ -80,15 +89,15 @@
                 </div>
             </div>
             <div class="box" id="id_box_2">
-                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="190.191.192.1"
+                <div style="background-color: #D46161; border-radius: 15px;" class="itemDevice" id="200.200.200.3"
                     draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">190.191.192.1</p>
+                    <p class="letter-red">200.200.200.3</p>
                 </div>
             </div>
             <div class="box" id="id_box_3">
-                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="190.191.192.2"
+                <div style="background-color: #DCC865; border-radius: 15px;" class="itemDevice" id="198.198.198.31"
                     draggable="true" ondragstart="dragStart(event)">
-                    <p class="letter-red">190.191.192.2</p>
+                    <p class="letter-red">198.198.198.31</p>
                 </div>
             </div>
         </div>
@@ -105,16 +114,14 @@
     </div>
 
 
-    <div class="container-2" style="margin-top: 15%;" id="container_2">
+    <div class="container-progressbar" id="container_2">
         <div class="progress-container" id="progress_container"></div>
     </div>
 
     <div class="container-information">
-
-        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
-
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
+                src="images/information.png" /></button>
     </div>
-
 
 
     <script src="functions1_3.js"></script>

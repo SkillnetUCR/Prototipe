@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
 </head>
 
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
+        </li>
+        <li>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
+        </li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alerta('Error','La pagina esta en contruccion.','Error')">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
 <body id="body" class="body" onload="loadOrden()">
 
     <div class="container" id="main_container">
@@ -68,7 +84,8 @@
     </div>
 
     <div class="container-information">
-        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
+                src="images/information.png" /></button>
     </div>
 
 

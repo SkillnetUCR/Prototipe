@@ -164,7 +164,7 @@ function failAnswer(origin, draggable) {
 
     alerta(
         "Respuesta incorrecta!",
-        "¡No te desanimes, sigue intentandolo!<br>",
+        orden[evaluar].ayuda,
         "error",
         ''
     );
@@ -210,7 +210,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 }
 
 //Alertas de respuestas
@@ -336,3 +336,14 @@ function siguienteNivel() {
 
 
 
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
+}

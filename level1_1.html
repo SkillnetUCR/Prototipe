@@ -16,23 +16,20 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <a href="index.html">
-                <img class="imgGame" src="images/logo_1.png"></img>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
+        </li>
+        <li>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
             </a>
         </li>
-        <li>
-            <h5 class="titleGame">SkillNet</h5>
-        </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto
-
-            </a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
     </ul>
-
     <ul>
         <li>
-            <a type="button" class="btn button-back" href="information1_1_2.html"><img style="width: 30px;"
+            <a type="button" class="btn button-back" href="9.11.html"><img style="width: 30px;"
                     src="./images/volver.png"></a>
         </li>
         <li>
@@ -74,6 +71,10 @@
         </div>
         <div class="instruccion-container">
             <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
+            <video id="video1" class="invisible video">
+                <source src="videos/guia1.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
         </div>
 
         <div class="optionesDevice-lvl1">
@@ -114,9 +115,8 @@
     </div>
 
     <div class="container-information">
-
-        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
-
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
+                src="images/information.png" /></button>
     </div>
 
 

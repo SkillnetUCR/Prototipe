@@ -16,63 +16,104 @@
 <nav>
     <ul>
         <li class="liImgGame">
-            <img class="imgGame" src="images/logo_1.png"></img>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
     </ul>
 
     <ul>
-        <li><a class="navbarLetter" href="register.html">Registrarse</a></li>
-        <li><a class="navbarLetter" href="index.html">Ingresar</a></li>
+        <li><a class="navbarLetter container-icon" href="register.html">Registrarse <img class="icon"
+                    src="images/iconRegister.png"></img></a></li>
+        <li><a class="navbarLetter container-icon" href="login.html">Ingresar <img class="icon"
+                    src="images/iconLogin.png"></img></a>
+        </li>
     </ul>
 </nav>
 
+<body class="body-login">
 
 
-<body id="body" class="body-login">
-
-    <div class="container-login-principal">
-
-        <div class="container-login">
-
-            <div class="container-img">
-                <img class="img-login" src="images/logo_1-completo.png"></img>
+    <div class="container-principal-carusel">
+        <a class="carousel-button prev-button invert"><img src="images/iconPrevius.svg"></a>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item active">
+                    <img src="images/imagen1.png" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/imagen2.png" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/imagen3.png" alt="Imagen 3">
+                </div>
             </div>
-            <div>
-                <form id="form-login">
-                    <label class="letter-form" for="email">Correo:</label>
-                    <input class="input-form" type="email" id="email" name="email" required>
-                    <label class="letter-form" for="password">Contraseña:</label>
-                    <input class="input-form" type="password" id="password" name="password" required>
-                    <button id="ingresar-login" class="btn btn-submit" type="submit">Ingresar</button>
-                    <div class="container-message">
-                        <p class="message-register">¿No tiene cuenta?</p><a class="message-button"
-                            href="register.html">Registrarse</a>
-                    </div>
-                </form>
-
-            </div>
-
-
         </div>
 
+        <a class="carousel-button next-button invert"><img src="images/iconNext.svg"></a>
+
+    </div>
 
 
 </body>
 
 
 
+<style>
+    .container-principal-carusel {
+        display: flex;
+        margin-top: 3%;
+        justify-content: center;
+        align-items: center;
+    }
 
-<script src="functions-login.js"></script>
+    .carousel {
+        width: 40%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+
+        border: dashed;
+        border-color: white;
+        border-radius: 15px;
+    }
+
+    .carousel-container {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+        flex: 0 0 33.3333%;
+    }
+
+    .carousel-item.active {
+        flex: 0 0 33.3333%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<footer class="footer">
+    <img src="images/logoUniversidadNacionalDeLaPlata.svg" class="logoUniversidad">
+    <img src="images/logoUniversidadCostaRica.png" class="logoUniversidad">
+</footer>
+
+
+<script src="functions-index.js"></script>
 <script src="sweetalert2/sweetalert2.all.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</body>
-
-</html>

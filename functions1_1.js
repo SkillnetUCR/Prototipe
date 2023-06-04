@@ -1,6 +1,6 @@
 const orden = [
 
-    { dispositivo: "127.191.193.0", respuesta: "Clase_A", ayuda: "La Clase A tiene un rango de:<br> 0.0.0.0 a 127.255.255.255" },
+    { dispositivo: "115.190.178.0", respuesta: "Clase_A", ayuda: "La Clase A tiene un rango de:<br> 0.0.0.0 a 127.255.255.255" },
     { dispositivo: "129.86.0.0", respuesta: "Clase_B", ayuda: "La Clase B tiene un rango de:<br> 128.0.0.0 a 191.255.255.255" },
     { dispositivo: "193.191.0.1", respuesta: "Clase_C", ayuda: "La Clase C tiene un rango de:<br> 192.0.0.0 a 223.255.255.255" },
 ];
@@ -195,7 +195,7 @@ function resetGame() {
 
     sessionStorage.setItem("vidas", 3);
 
-    location.reload();
+    window.location.href = "levelSelector.html"
 
 }
 
@@ -289,14 +289,14 @@ function capitalizeFirstLetter(string) {//Hace mayuscula la primer letra
 
 function showInstruccion() {
     const instruccion = document.getElementById("instruccion");
+    const video = document.getElementById("video1");
     const imgs = document.querySelectorAll('.img-device');
     instruccion.classList.toggle("invisible");
+    video.classList.toggle("invisible");
 
     imgs.forEach(img => {
         img.classList.add('imgInstruccion');
-
     });
-
     setTimeout(() => {
         imgs.forEach(img => {
             img.classList.remove('imgInstruccion');
@@ -308,4 +308,18 @@ function showInstruccion() {
 function siguienteNivel() {
 
     window.location.href = "9.17.html";
+}
+
+
+
+function alertaConstruction() {
+    Swal.fire({
+        title: "No permitido.",
+        html: "La página se encuentra en construcción.",
+        icon: "error",
+        imageWidth: 100,
+        imageHeight: 100,
+        position: "center",
+
+    });
 }

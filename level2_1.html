@@ -12,20 +12,29 @@
 
 
 </head>
-
 <nav>
     <ul>
         <li class="liImgGame">
-            <a href="index.html">
-                <img class="imgGame" src="images/logo_1.png"></img>
-            </a>
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
         </li>
         <li>
-            <h5 class="titleGame">SkillNet</h5>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
         </li>
-        <li><a class="navbarLetter" href="#">Inicio</a></li>
-        <li><a class="navbarLetter" href="#">Ranking</a></li>
-        <li><a class="navbarLetter" href="#">Contacto</a></li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alertaConstruction()">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
+    </ul>
+    <ul>
+        <li>
+            <a type="button" class="btn button-back" href="9.19.html"><img style="width: 30px;"
+                    src="./images/volver.png"></a>
+        </li>
+        <li>
+            <a type="button" class="btn button-back" href="levelSelector.html"><img style="width: 30px;"
+                    src="./images/hogar.png"></a>
+        </li>
     </ul>
 </nav>
 
@@ -62,11 +71,9 @@
         </style>
 
         <div class="drop-targets" id="drop-targets">
-            <div id="salida" style="background-color: aliceblue; height: 100px;
-    width: 200px;"></div>
+            <div id="salida" class="salida"></div>
             <div class="box normalRespuesta" id="respuesta2_2" name="respuesta"></div>
-            <div id="llegada" style="background-color: aliceblue; height: 100px;
-    width: 200px;"></div>
+            <div id="llegada" class="salida"></div>
         </div>
         <div class="instruccion-container">
             <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
@@ -75,16 +82,16 @@
         <div class="optionsCable">
             <div class="box" id="id_box_1">
                 <div class="itemDevice" id="item_1" draggable="true" ondragstart="dragStart(event)">
-                    <img class="img-device" id="crossover" name="crossover" src="./images/etapa2-1/crossover.jpg" />
-                </div>
-                <button type="button" class="btn btn-cable" id="button-crossover">CROSSOVER</button>
-            </div>
-            <div class="box" id="id_box_2">
-                <div class="itemDevice" id="item_2" draggable="true" ondragstart="dragStart(event)">
                     <img class="img-device" id="puntoapunto" name="puntoapunto"
                         src="./images/etapa2-1/puntoapunto.jpg" />
                 </div>
                 <button type="button" class="btn btn-cable" id="button-crossover">PUNTO A PUNTO</button>
+            </div>
+            <div class="box" id="id_box_2">
+                <div class="itemDevice" id="item_2" draggable="true" ondragstart="dragStart(event)">
+                    <img class="img-device" id="crossover" name="crossover" src="./images/etapa2-1/crossover.jpg" />
+                </div>
+                <button type="button" class="btn btn-cable" id="button-crossover">CROSSOVER</button>
             </div>
             <div class="box" id="id_box_3">
                 <div class="itemDevice" id="item_3" draggable="true" ondragstart="dragStart(event)">
@@ -124,9 +131,9 @@
     </div>
 
     <div class="container-information">
-        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()">i</button>
+        <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
+                src="images/information.png" /></button>
     </div>
-
 
 
 
