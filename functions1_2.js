@@ -297,8 +297,10 @@ function capitalizeFirstLetter(string) {//Hace mayuscula la primer letra
 
 function showInstruccion() {
     const instruccion = document.getElementById("instruccion");
+    const video = document.getElementById("video1");
     const imgs = document.querySelectorAll('.img-device');
     instruccion.classList.toggle("invisible");
+    video.classList.toggle("invisible");
 
     imgs.forEach(img => {
         img.classList.add('imgInstruccion');
