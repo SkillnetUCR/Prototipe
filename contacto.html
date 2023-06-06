@@ -79,14 +79,24 @@
 
 
     .informationPerfil {
-        width: 40%;
+        width: 70%;
         margin-top: 5px;
         border-radius: 15px;
-        padding: 5px 5px;
+        padding: 3px 3px;
         font-size: larger;
         font-family: initial;
         background-color: white;
         border: none;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+
+
+        display: flex;
+    }
+
+    .informationPerfil:hover {
+        color: blue;
     }
 
     .imagePerfil {
@@ -105,9 +115,13 @@
 
             <div class="container-references-contacto">
                 <img src="images/imagePerfil.jpg" class="imagePerfil">
-                <button class="informationPerfil">Orcid</button>
-                <button class="informationPerfil">Google Schoolar</button>
-                <button class="informationPerfil">Email</button>
+                <a class="informationPerfil" href="https://orcid.org/0000-0003-3932-3045"><img class="icon"
+                        src="images/iconOrcid.png" style="filter: invert(0%); margin-right: 2px;">Orcid</a>
+                <a class="informationPerfil" href="https://scholar.google.com/citations?user=HM0BnPgAAAAJ&hl=es"><img
+                        class="icon" style="filter: invert(0%); margin-right: 2px;" src="images/iconSchoolar.png">Google
+                    Schoolar</a>
+                <a class="informationPerfil" href="mailto:juan.sandidelgado@ucr.ac.cr"><img class="icon"
+                        src="images/iconMail.png" style="filter: invert(0%); margin-right: 2px;">Email</a>
 
             </div>
             <div class="container-titules-contacto">

@@ -822,6 +822,12 @@ footer {
     filter: invert(100%);
 }
 
+.imgBack {
+    width: 30px;
+    filter: invert(100%);
+}
+
+
 .invert {
     filter: invert(100%);
 }
