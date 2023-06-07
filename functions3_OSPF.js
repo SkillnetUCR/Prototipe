@@ -46,7 +46,6 @@ function siguienteNivel() {
 
     sessionStorage.setItem("finjuego", "desbloqueada");
 
-
     Swal.fire({
         title: "Has completado todo el juego!",
         html: "¡Felicitaciones!",
@@ -72,59 +71,62 @@ function comprobarRespuesta() {
 
     const respuesta = document.getElementById("respuesta").value;
 
-    for (var i = 0; i < orden.length; i++) {
+    if (respuesta != "") {
 
-        if (respuesta == orden[i].respuesta) {
+        document.getElementById("respuesta").value = "";
 
-            numberQuestion = numberQuestion - 1;
+        for (var i = 0; i < orden.length; i++) {
 
-            correct(i);
+            if (respuesta == orden[i].respuesta) {
 
-            orden[i].respuesta = "listo";
-            //
+                numberQuestion = numberQuestion - 1;
+
+                correct(i);
+
+                orden[i].respuesta = "listo";
+                //
+            }
         }
+
+        if (boolean == false) {
+
+            fail();
+        }
+
+        loadOrden();
+
+        boolean = false;
+
+        if (numberQuestion == 0) {
+            siguienteNivel();
+        }
+
+        if (sessionStorage.getItem('vidas') == 0) {
+
+            //Hay que cambiar este aviso por un reset o continuar o mostrar el menu
+            Swal.fire({
+                title: "Sin vidas",
+                html: "¡No te desanimes, sigue intentándolo!<br>",
+                icon: "error",
+                iconColor: 'red',
+                showConfirmButton: "true",
+                confirmButtonText: "Aceptar",
+                position: "center",
+                toast: true,
+                timer: 5000, // tiempo en milisegundos
+                timerProgressBar: "true",
+                didOpen: (toast) => {
+                    toast.addEventListener("mouseenter", Swal.stopTimer);
+                    toast.addEventListener("mouseleave", Swal.resumeTimer);
+                },
+            }).then(() => {
+                resetGame();
+            });
+        }
+
+    } else {
+        alerta("Sin respuesta", "Responda la pregunta.", "Info");
     }
-
-    if (boolean == false) {
-
-        fail();
-    }
-
-    loadOrden();
-
-    boolean = false;
-
-    if (numberQuestion == 0) {
-        siguienteNivel();
-    }
-
-    if (sessionStorage.getItem('vidas') == 0) {
-
-        //Hay que cambiar este aviso por un reset o continuar o mostrar el menu
-        Swal.fire({
-            title: "Sin vidas",
-            html: "¡No te desanimes, sigue intentándolo!<br>",
-            icon: "error",
-            iconColor: 'red',
-            showConfirmButton: "true",
-            confirmButtonText: "Aceptar",
-            position: "center",
-            toast: true,
-            timer: 5000, // tiempo en milisegundos
-            timerProgressBar: "true",
-            didOpen: (toast) => {
-                toast.addEventListener("mouseenter", Swal.stopTimer);
-                toast.addEventListener("mouseleave", Swal.resumeTimer);
-            },
-        }).then(() => {
-            resetGame();
-        });
-
-
-    }
-
-
-
 
 }
 

@@ -1195,8 +1195,8 @@ img {
 
 
 .button-aceptar {
-    width: 70px;
     align-self: center;
+    /* background-color: #269223; */
 }
 
 .respuesta {
