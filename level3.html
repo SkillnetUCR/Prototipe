@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillsNet games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+</head>
+
+<nav>
+    <ul>
+        <li class="liImgGame">
+            <a class="navbarLetter" href="index.html"><img class="imgGame" src="images/logo_1.png"></img></a>
+        </li>
+        <li>
+            <a class="navbarLetter" href="index.html">
+                <h5 class="titleGame">SkillNet</h5>
+            </a>
+        </li>
+        <li><a class="navbarLetter" href="index.html">Inicio</a></li>
+        <li><a class="navbarLetter" onclick="alerta('Error','La pagina esta en contruccion.','Error')">Ranking</a></li>
+        <li><a class="navbarLetter" href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <ul>
+        <li>
+            <a type="button" class="btn button-back" href="9.24.html"><img class="imgBack"
+                    src="./images/volver.png"></a>
+        </li>
+        <li>
+            <a type="button" class="btn button-back" href="levelSelector.html"><img class="imgBack"
+                    src="./images/hogar.png"></a>
+        </li>
+    </ul>
+
+</nav>
+
+<body id="body" class="body" onload="loadOrden()">
+
+    <div class="container" id="main_container">
+
+        <div class="container-option-subnets">
+
+            <div>
+                <button class="button-protocol" onclick="redirectOSPF()">
+                    OSPF
+                </button>
+            </div>
+            <div>
+                <button class="button-protocol" onclick="alertaConstruction()">
+                    BGP
+                </button>
+            </div>
+            <div>
+                <button class="button-protocol" onclick="alertaConstruction()">
+                    RIP
+                </button>
+            </div>
+            <div>
+                <button class="button-protocol" onclick="alertaConstruction()">
+                    EIGRP
+                </button>
+            </div>
+            <div>
+                <button class="button-protocol" onclick="alertaConstruction()">
+                    ADMIN
+                </button>
+            </div>
+            <div>
+                <button class="button-protocol" onclick="alertaConstruction()">
+                    SWITCH
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        
+    </style>
+
+    <script src="functions3.js"></script>
+    <script src="sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>

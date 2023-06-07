@@ -27,7 +27,7 @@
 
     <ul>
         <li>
-            <a type="button" class="btn button-back" href="9.24.html"><img class="imgBack"
+            <a type="button" class="btn button-back" href="level3.html"><img class="imgBack"
                     src="./images/volver.png"></a>
         </li>
         <li>
@@ -51,40 +51,64 @@
 
         <div class="container-2" style="margin-block-end: 0%;">
             <div class="titles" id="evaluando">
-                <button type="button" class="btn" id="button-devices">Dispositivo</button>
+                <button type="button" class="btn" id="button-devices">OSPF</button>
 
             </div>
         </div>
 
 
-        <div class="drop-targets" id="drop-targets">
+        <!-- <div class="drop-targets" id="drop-targets">
             <div class="box normalRespuesta" id="respuesta2_2" name="respuesta"></div>
-        </div>
+        </div> -->
         <div class="instruccion-container">
-            <h5 id="instruccion" class="invisible">Selecciona Dispositivo y arrastralo al recuadro de arriba</h5>
+            <h5 id="instruccion" class="invisible" style="margin: 3%;">Selecciona Dispositivo y arrastralo al recuadro
+                de arriba</h5>
             <video id="video1" class="invisible video">
                 <source src="videos/guia1.mp4" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
         </div>
 
-        <div class="optionsDevice">
+        <div class="container-OSPF-principal">
 
-            <div>
+            <div class="container-OSPF">
+                <div style="display: flex; flex-direction: column;">
 
+                    <label class="indication" for="opcion">Respuesta:</label>
+                    <input id="respuesta" class="respuesta input-form" />
 
-            </div>
+                    <button id="button-aceptar" class="button-aceptar">Aceptar<img src="images/"></button>
 
-            <div>
+                    <div id="correct" class="correct"></div>
+                </div>
+                <div class="container-textArea">
+                    <label class="indication" for="opcion">Opciones:</label>
+                    <textarea id="opcion" class="textArea" rows="10" cols="50" readonly>
+-router bgp 300
+-network 205.205.205.32 mask 255.255.255.224
+-interface loopback 50
+-ip add 50.50.50.51 255.255.255.255
+-router rip
+-ip ospf hello-interval 5
+-ip ospf dead-interval 20
+-version 2
+-ip ospf message-digest-key 1 md5 7 asecret
+-no shutdown
+                </textarea>
 
+                </div>
             </div>
 
         </div>
 
+        <style>
+            
+        </style>
+
 
         <div class="nivel-container invisible" id="nivel_completado">
             <h1>¡Felicidades!</h1>
-            <h2>Nivel 2 de la Etapa 2 completado</h2>
+            <h2>Nivel 1 de la Etapa 3 completado</h2>
             <h3>Nuevos conocimientos adquiridos!</h3>
 
             <div class="boton-siguiente-nivel" id="siguiente_nivel" onclick="siguienteNivel()">
@@ -95,9 +119,9 @@
     </div>
 
 
-    <div class="container-2" id="container_2">
+    <!-- <div class="container-2" id="container_2">
         <div class="progress-container" id="progress_container"></div>
-    </div>
+    </div> -->
 
     <div class="container-information">
         <button type="button" class="btn button-information" id="btn-information" onclick="showInstruccion()"><img
@@ -105,7 +129,7 @@
     </div>
 
 
-    <script src="functions3_1.js"></script>
+    <script src="functions3_OSPF.js"></script>
     <script src="sweetalert2/sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>

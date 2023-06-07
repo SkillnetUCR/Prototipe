@@ -319,7 +319,6 @@ function siguienteNivel() {
 
     sessionStorage.setItem("isla-2", "desbloqueada");
 
-    window.location.href = "levelSelector.html";
 
     alerta(
         "La isla 2 fue desbloqueada!",
@@ -327,6 +326,10 @@ function siguienteNivel() {
         "success",
         ""
     );
+
+    setTimeout(function () {
+        window.location.href = "levelSelector.html";
+    }, 3000); // 3000 milisegundos = 3 segundos
 
 }
 function alertaConstruction() {

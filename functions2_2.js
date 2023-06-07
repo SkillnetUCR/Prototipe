@@ -1,14 +1,14 @@
 const orden = [
-    { dispositivo: "tester", ayuda: "Salto de red" },
-    { dispositivo: "router", ayuda: "Broadcast" },
-    { dispositivo: "cable-UTP", ayuda: "Primer ip utilizable" },
-    { dispositivo: "laptop", ayuda: "Último ip utilizable" },
-    { dispositivo: "patch-panel", ayuda: "Cantidad de hosts" },
-    { dispositivo: "RJ45", ayuda: "Cantidad de hosts" },
-    { dispositivo: "rack", ayuda: "Cantidad de hosts" },
-    { dispositivo: "ponchadora", ayuda: "Cantidad de hosts" },
-    { dispositivo: "prensadora", ayuda: "Cantidad de hosts" },
-    { dispositivo: "cable-Coaxial", ayuda: "Cantidad de hosts" }
+    { dispositivo: "tester", ayuda: "Dispositivo portátil, normalmente de color amarillo.<br>Posee una entrada RJ45." },
+    { dispositivo: "router", ayuda: "Dispositivo de Packet Tracer encargado de envíar información de Internet a dispositivos." },
+    { dispositivo: "cable-UTP", ayuda: "Cable UTP es normalmente de color Azul, con cables de color rojo, verde, cafe y azul dentro del mismo." },
+    { dispositivo: "laptop", ayuda: "Una laptop es una computadora portátil." },
+    { dispositivo: "patch-panel", ayuda: "Es el elemento encargado de recibir todos los cables del cableado estructurado." },
+    { dispositivo: "RJ45", ayuda: "Es una interfaz física comúnmente utilizada para conectar computadoras. <BR>Posee ocho pines o conexiones eléctricas." },
+    { dispositivo: "rack", ayuda: "Es un soporte metálico destinado a alojar equipamiento electrónico." },
+    { dispositivo: "ponchadora", ayuda: "Es una herramienta pequeña con una punta para colocar los cables UTP en un puerto RJ45 hembra." },
+    { dispositivo: "prensadora", ayuda: "Es una herramienta pequeña con forma de alicate o pinza. " },
+    { dispositivo: "cable-Coaxial", ayuda: "Es un cable que se compone de dos conductores que se orientan de forma coaxial y separados por una capa de aislamiento dieléctrico." }
 ];
 
 //Variable para medir el progreso
@@ -326,14 +326,16 @@ function siguienteNivel() {
 
     sessionStorage.setItem("isla-3", "desbloqueada");
 
-    window.location.href = "levelSelector.html";
-
     alerta(
-        "La isla 2 fue desbloqueada!",
+        "La isla 3 fue desbloqueada!",
         "¡Felicitaciones, vas muy bien!",
         "success",
         ""
     );
+
+    setTimeout(function () {
+        window.location.href = "levelSelector.html";
+    }, 3000); // 3000 milisegundos = 3 segundos
 }
 
 

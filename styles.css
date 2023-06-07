@@ -17,7 +17,7 @@ body {
 
 
 h1 {
-    color: #000000;
+    color: #e4fc10;
     margin-bottom: 40px;
 }
 
@@ -1140,4 +1140,95 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* LEVEL 3 */
+
+.container-option-subnets {
+    display: grid;
+    /* grid-template-columns: 10% 10% 10% 10% 10% 10% 10%; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    justify-items: center;
+    margin-top: 5%;
+
+    background-color: #3d767d;
+    padding: 50px 50px;
+    border-radius: 15px;
+}
+
+.button-protocol {
+    padding: 15px 15px;
+    border-radius: 20px;
+    font-size: larger;
+    font-style: initial;
+    font-family: serif;
+}
+
+
+/* LEVEL 3 OSPF */
+.countResult {
+    color: white;
+    font-family: inherit;
+    font-size: initial;
+}
+
+.correct {
+    margin-top: 2%;
+    background-color: #01424b;
+    padding: 5px 5px;
+    border-radius: 15px;
+
+    align-self: center;
+    color: white;
+}
+
+.indication {
+    font-size: larger;
+    color: white;
+    margin-block-end: 1%;
+    font-family: revert;
+    font-weight: 600;
+    color: white;
+}
+
+
+.button-aceptar {
+    width: 70px;
+    align-self: center;
+}
+
+.respuesta {
+
+    width: 320px;
+}
+
+.container-OSPF {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.textArea {
+    width: 250px;
+    min-inline-size: min-content;
+    font-size: large;
+    border-radius: 7px;
+}
+
+.container-textArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-OSPF-principal {
+
+    background-color: #3d767d;
+    padding: 15px 15px;
+    border-radius: 15px;
+    width: 90vh;
+
+    margin-top: 4%;
+
 }
