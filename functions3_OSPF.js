@@ -40,6 +40,13 @@ function correct(i) {
 function fail() {
     sessionStorage.setItem('vidas', (sessionStorage.getItem('vidas') - 1));
 
+    alerta(
+        "Respuesta incorrecta!",
+        "¡No te desanimes, sigue intentándolo!<br>",
+        "error",
+        ''
+    );
+
 }
 
 function siguienteNivel() {
