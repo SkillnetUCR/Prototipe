@@ -1102,6 +1102,20 @@ img {
     align-items: center;
 }
 
+.videoGUIA-container {
+    width: 55%;
+    height: 400px;
+    border: dashed;
+    border-color: white;
+    border-radius: 15px;
+}
+
+.iframeVideoGUIA {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 15px;
+}
+
 .carousel {
     width: 55%;
     height: 400px;
@@ -1112,6 +1126,8 @@ img {
     border-color: white;
     border-radius: 15px;
 }
+
+
 
 .carousel-container {
     display: flex;
@@ -1157,6 +1173,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cloud:hover {
+    background-color: #019d97;
+    transform: scale(1.2);
 }
 
 

@@ -41,9 +41,17 @@
 
 
     <div class="container-principal-carusel">
-        <a class="carousel-button prev-button invert"><img src="images/iconPrevius.svg"></a>
-        <div class="carousel">
-            <div class="carousel-container">
+
+        <div id="videoGUIA-container" class="videoGUIA-container invisible">
+            <iframe id="iframeVideoGUIA" class="iframeVideoGUIA invisible"
+                src="https://www.youtube.com/embed/o-SOG6anJe0" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <a id="carousel-prev" class="carousel-button prev-button invert"><img src="images/iconPrevius.svg"></a>
+        <div id="carousel" class="carousel">
+
+            <div id="carousel-container" class="carousel-container">
                 <div class="carousel-item active">
                     <img src="images/imagen1.png" alt="Imagen 1">
                 </div>
@@ -59,7 +67,7 @@
             </div>
         </div>
 
-        <a class="carousel-button next-button invert"><img src="images/iconNext.svg"></a>
+        <a id="carousel-next" class="carousel-button next-button invert"><img src="images/iconNext.svg"></a>
 
     </div>
 
@@ -77,6 +85,13 @@
             <img class="icoIndex invert" src="images/iconBook.png" />
             <p>Refuerza conceptos y componentes de Red</p>
         </div>
+
+        <button class="cloud-information cloud" style="border: none; cursor: pointer;" onclick="showVideoGuia()">
+
+            <img class="icoIndex invert" src="images/iconVideo.png" />
+            <p>Video informativo</p>
+        </button>
+
 
     </div>
 
