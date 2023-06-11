@@ -9,8 +9,8 @@ var button = document.querySelector('.button-aceptar');
 button.addEventListener('click', comprobarRespuesta);
 
 const orden = [
-    { respuesta: "ip ospf hello-interval 5" },
-    { respuesta: "ip ospf dead-interval 20" },
+    { respuesta: "ip ospf hello-interval 25" },
+    { respuesta: "ip ospf dead-interval 100" },
     { respuesta: "ip ospf message-digest-key 1 md5 7 asecret" },
     { respuesta: "interface loopback 50" }]
 

@@ -90,8 +90,8 @@
 -interface loopback 50
 -ip add 50.50.50.51 255.255.255.255
 -router rip
--ip ospf hello-interval 5
--ip ospf dead-interval 20
+-ip ospf dead-interval 100
+-ip ospf hello-interval 25
 -version 2
 -ip ospf message-digest-key 1 md5 7 asecret
 -no shutdown

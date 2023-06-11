@@ -228,7 +228,7 @@ function alerta(titulo, texto, icono, iconoColor, fondo) {
         confirmButtonText: "Aceptar",
         position: "top-end",
         toast: true,
-        timer: 1800,
+        timer: 22800,
         timerProgressBar: "true",
         didOpen: (toast) => {
             toast.addEventListener("mouseenter", Swal.stopTimer);

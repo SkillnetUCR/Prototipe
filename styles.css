@@ -6,6 +6,18 @@
     box-sizing: border-box;
 }
 
+p {
+
+    color: white;
+    line-height: 1.7;
+    font-family: inherit;
+    font-size: 22px;
+
+
+}
+
+
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,7 +38,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.25rem 1.25rem 0px 1.25rem;
+    margin: 0.5rem 1.25rem 0px 1.25rem;
 }
 
 /* .oscuro{
@@ -39,7 +51,6 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 1%;
 
 }
 
@@ -293,7 +304,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+
 }
 
 .circle {
@@ -440,6 +451,7 @@ h1 {
 .nivel-container h1 {
     margin-top: 10px;
     margin-bottom: 36px;
+    font-size: 25px;
 }
 
 
@@ -569,10 +581,7 @@ h1 {
 
 }
 
-#container_2 {
-    margin-top: 3%;
-
-}
+#container_2 {}
 
 
 .container-information {
@@ -606,19 +615,35 @@ li {
 .navbarLetter {
     color: white;
     text-decoration: none;
-    font-size: 15px;
-}
-
-.navbarLetter:hover {
-    border-bottom: 2px solid white;
+    font-size: 30px;
 }
 
 .titleGame {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: normal;
 }
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    filter: invert(100%);
+}
+
+
+h5 {
+    font-size: 30px;
+}
+
+
+
+.navbarLetter:hover {
+    border-bottom: 2px solid white;
+}
+
+
 
 .imgGame {
     width: 40px;
@@ -658,9 +683,8 @@ footer {
 }
 
 .logoUniversidad {
-
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
 
 }
 
@@ -674,13 +698,14 @@ footer {
     background-color: yellow;
     color: black;
     font-weight: bold;
-    margin-top: 15PX;
+    margin-top: 10PX;
+    font-size: 25px;
     margin-block-end: 5px;
 }
 
 #container-principal-information {
     background-color: #3d767d;
-    width: 85vh;
+    width: 99%;
     border-radius: 10px;
 }
 
@@ -815,12 +840,6 @@ footer {
 }
 
 /* LOGIN ELEMENTOS */
-.icon {
-    width: 25px;
-    height: 25px;
-    margin-left: 5px;
-    filter: invert(100%);
-}
 
 .imgBack {
     width: 30px;
@@ -872,6 +891,7 @@ form {
     margin-bottom: 20px;
     background-color: #24767c;
     padding: 10px;
+    font-size: 20px;
 }
 
 .container-login-principal {
@@ -884,7 +904,7 @@ form {
 
     background-color: #2A2A2A;
     width: 300px;
-    height: 400px;
+    height: 450px;
     border-radius: 15px;
     margin-top: 10%;
     margin-right: 15%;
@@ -901,20 +921,26 @@ form {
     height: 100px;
 }
 
+label {
+    font-size: 20px;
+}
+
 .message-register {
     color: white;
     margin-right: 5px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .message-button {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .container-message {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
 }
 
 /* NIVEL 1 */
@@ -953,9 +979,7 @@ form {
     margin-top: 2%;
 }
 
-.container-objective {
-    margin-block-end: 3%;
-}
+.container-objective {}
 
 .container-title {
     display: flex;
@@ -963,8 +987,7 @@ form {
     font-style: oblique;
     font-family: monospace;
     color: white;
-    margin-block-end: 3%;
-    margin-top: 3%;
+
 }
 
 
@@ -974,14 +997,7 @@ form {
     display: flex;
 }
 
-p {
 
-    color: white;
-    line-height: 1.7;
-    font-family: inherit;
-    font-size: larger;
-
-}
 
 .container-ejemplo {}
 
@@ -1015,11 +1031,12 @@ p {
 }
 
 .btn-cable {
-    margin-top: 2%;
+    margin-top: 2px;
     background-color: white;
     border-radius: 30px;
     color: black;
     font-weight: bold;
+    margin-block-end: 15px;
 
 }
 
@@ -1086,7 +1103,7 @@ img {
 }
 
 .carousel {
-    width: 40%;
+    width: 55%;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -1132,7 +1149,7 @@ img {
 .cloud-information {
     flex-direction: column;
     background-color: #3F3F3F;
-    width: 200px;
+    width: 260px;
     padding: 12px 12px;
     height: 200px;
     border-radius: 5px;
@@ -1207,7 +1224,7 @@ img {
 .container-OSPF {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .textArea {
@@ -1227,8 +1244,90 @@ img {
     background-color: #3d767d;
     padding: 15px 15px;
     border-radius: 15px;
-    width: 90vh;
+    width: 110vh;
 
     margin-top: 4%;
 
+}
+
+/*9.22*/
+
+.container-principal-2 {
+    background-color: #3d767d;
+    border-radius: 10px;
+
+}
+
+
+/
+/*Contacto*/
+
+.container-principal-contacto-2 {
+    display: flex;
+    /* width: 45%; */
+    justify-content: center;
+}
+
+.container-contacto {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: #D9D9D9;
+    width: 70%;
+    border-radius: 15px;
+}
+
+
+.container-references-contacto {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 2%;
+    margin-top: -5%;
+    margin-left: 5%;
+}
+
+.container-titules-contacto {
+    /* width: 60%;
+
+        margin-right: 30%; */
+
+    margin-left: 10%;
+    margin-right: 5%;
+
+}
+
+
+.informationPerfil {
+    width: 75%;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding: 3px 3px;
+    font-size: larger;
+    font-family: initial;
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+
+
+    display: flex;
+    align-items: center;
+}
+
+.informationPerfil:hover {
+    color: blue;
+}
+
+.imagePerfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-color: #D9D9D9;
+    border-style: solid;
 }

@@ -53,9 +53,9 @@ function loadOrden() {
     addLives();
     loadDevice();
 
-    const button = document.getElementById("button-devices");
+//    const button = document.getElementById("button-devices");
 
-    button.textContent = capitalizeFirstLetter(orden[evaluar].dispositivo)//Hace mayuscula la primer letra
+//    button.textContent = capitalizeFirstLetter(orden[evaluar].dispositivo)//Hace mayuscula la primer letra
 
     document.getElementById("instruccion").innerText =
         "Selecciona el " +
